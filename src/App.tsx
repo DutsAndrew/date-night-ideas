@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import './App.css'
+import './styles/App.css';
 import DateNightOptions from './components/DateNightOptions';
 import DateNightSelector from './components/DateNightSelector';
 import DateRandomizer from './components/DateRandomizer';
+import FallingHearts from './components/FallingHearts';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <h1>
             Choose Your Own Date Night
           </h1>
+          <FallingHearts />
           <DateNightOptions 
             handleUserSelection={handleUserSelection}
           />

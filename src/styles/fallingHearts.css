@@ -1,0 +1,51 @@
+.falling-hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100vh; /* Set the container height to the viewport height */
+  width: 100vw;
+  z-index: -1;
+}
+
+.falling-heart-container {
+  position: absolute;
+  top: -50px; /* Adjust the initial top position */
+  animation: fallAnimation linear infinite, moveLeftToRight linear 1s infinite;
+}
+
+.falling-heart {
+  width: 3vw; /* Adjust the width as needed */
+  height: auto;
+}
+
+@keyframes fallAnimation {
+  to {
+    top: 100vh; /* Set the final top position to make the hearts disappear at the bottom */
+  }
+}
+
+
+@keyframes moveLeftToRight {
+  0% {transform: translateX(0vw);}
+  5% {transform: translateX(0.25vw);}
+  10% {transform: translateX(0.5vw);}
+  15% {transform: translateX(0.75vw);}
+  20% {transform: translateX(1vw);}
+  25% {transform: translateX(1.25vw);}
+  30% {transform: translateX(1.5vw);}
+  35% {transform: translateX(1.75vw);}
+  40% {transform: translateX(2vw);}
+  45% {transform: translateX(2.25vw);}
+  50% {transform: translateX(2.5vw);}
+  55% {transform: translateX(2.25vw);}
+  60% {transform: translateX(2vw);}
+  65% {transform: translateX(1.75vw);}
+  70% {transform: translateX(1.5vw);}
+  75% {transform: translateX(1.25vw);}
+  80% {transform: translateX(1vw);}
+  85% {transform: translateX(0.75vw);}
+  90% {transform: translateX(0.5vw);}
+  95% {transform: translateX(0.25vw);}
+  100% {transform: translateX(0vw);}
+}
