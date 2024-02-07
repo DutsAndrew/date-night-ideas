@@ -11,10 +11,14 @@ const DropDown:FC<DropDownProps> = (props): JSX.Element => {
     handleUserEventSelection,
   } = props;
 
+  const capitalizeFirstLetter = (words: string) => {
+    return words.charAt(0).toUpperCase() + words.slice(1);
+  };
+
   return (
     <>
       <h2>
-        {title}
+        {capitalizeFirstLetter(title)}
       </h2>
       <select onChange={(e) => {
         if (title === 'location') handleUserLocationSelection!(e.target.value);
@@ -23,7 +27,7 @@ const DropDown:FC<DropDownProps> = (props): JSX.Element => {
         <option value={'none'}>{title === 'location' ? 'Select a Location' : 'Select a Date'}</option>
         {list.map((item) => {
           return <DropDownItem 
-            item={item}
+            item={item.toLowerCase()}
           />
         })}
       </select>

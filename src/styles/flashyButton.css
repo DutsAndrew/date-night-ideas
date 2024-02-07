@@ -1,0 +1,62 @@
+.flashy-button {
+  min-width: 40vw;
+  height: 10vh;
+  background-color: #FFD700;
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 3em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite alternate;
+}
+
+.flashy-button:hover {
+  background-color: #FFA500;
+}
+
+.flashy-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  animation: ripple 2s infinite;
+}
+
+.flashy-button:hover::before {
+  width: 350%;
+  height: 350%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  to {
+    opacity: 0;
+    width: 500px;
+    height: 500px;
+  }
+}

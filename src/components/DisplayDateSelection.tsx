@@ -3,14 +3,27 @@ import { DisplayDateSelectionProps } from "../types/typeList";
 
 const DisplayDateSelection:FC<DisplayDateSelectionProps> = (props): JSX.Element => {
 
-  const { location, event } = props;
+  const { 
+    location, 
+    event,
+    startOver,
+  } = props;
 
   return (
-    <>
-      <h3>Your Date:</h3>
-      <p><strong>Location: </strong>{location}</p>
-      <p><strong>Event: </strong>{event}</p>
-    </>
+    <div className="resultsContainer">
+      <h2>Results:</h2>
+      <p><strong>Location:</strong></p>
+      <p style={{margin: "auto"}}>{location}</p>
+      <p><strong>Event:</strong></p>
+      <p style={{margin: "auto"}}>{event}</p>
+      <button 
+        style={{
+          marginTop: "5vh",
+        }}
+        onClick={() => startOver()}>
+          Start Over
+      </button>    
+    </div>
   );
 };
 

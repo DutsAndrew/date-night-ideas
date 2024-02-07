@@ -6,14 +6,20 @@ const DateNightOptions:FC<DateNightOptionProps> = (props): JSX.Element => {
   const { handleUserSelection } = props;
 
   return (
-    <>
-      <button onClick={() => handleUserSelection('auto')}>
+    <div className="buttonSelectorContainer">
+      <button 
+        className="buttonSelector"
+        onClick={() => handleUserSelection('auto')}
+      >
         Pick for me!
       </button>
-      <button onClick={() => handleUserSelection('self')}>
+      <button 
+        className="buttonSelector"
+        onClick={() => handleUserSelection('self')}
+      >
         I'll pick!
       </button>
-    </>
+    </div>
   )
 };
 

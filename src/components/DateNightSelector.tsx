@@ -3,12 +3,9 @@ import DropDown from "./DropDown";
 import { atHomeEvents } from '../files/atHomeEvents';
 import { aroundTownEvents } from '../files/AroundTownEvents';
 import { locations } from '../files/locations';
-import { DateNightSelectorProps } from "../types/typeList";
 import DisplayDateSelection from "./DisplayDateSelection";
 
-const DateNightSelector:FC<DateNightSelectorProps> = (props): JSX.Element => {
-
-  const { handleUserSelection } = props;
+const DateNightSelector:FC = (): JSX.Element => {
 
   const [location, setLocation] = useState('none');
   const [event, setEvent] = useState('none');
@@ -21,11 +18,17 @@ const DateNightSelector:FC<DateNightSelectorProps> = (props): JSX.Element => {
     return setEvent(selection);
   };
 
+  const resetSelections = () => {
+    setLocation('none');
+    setEvent('none');
+  };
+
   if (location !== 'none' && event !== 'none') {
     return (
       <DisplayDateSelection 
         location={location}
         event={event}
+        startOver={resetSelections}
       />
     );
   } else {
@@ -48,7 +51,7 @@ const DateNightSelector:FC<DateNightSelectorProps> = (props): JSX.Element => {
         )}
       </>
     );
-  };
+  }
 };
 
 export default DateNightSelector;

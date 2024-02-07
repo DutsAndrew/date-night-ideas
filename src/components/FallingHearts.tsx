@@ -1,13 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import '../styles/fallingHearts.css';
 import heart from '../assets/cards-heart.svg';
+import { FallingHeartProps } from "../types/typeList";
 
-const FallingHearts = () => {
+const FallingHearts:FC<FallingHeartProps> = (props): JSX.Element => {
+
+  const { heartAmount, startDelay, fallDuration } = props;
 
   const generateHearts = () => {
-    return [...Array(25)].map((_, index) => {
-      const delay = Math.random() * 5; // Random delay between 0 and 5 seconds
-      const duration = 10 + Math.random() * 8; // Random duration between 10 and 20 seconds
+    return [...Array(heartAmount)].map((_, index) => {
+      const delay = Math.random() * startDelay; // Random delay between 0 and 5 seconds
+      const duration = 10 + Math.random() * fallDuration; // Random duration between 10 and 20 seconds
 
       return (
         <div 

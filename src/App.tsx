@@ -17,26 +17,46 @@ function App() {
     if (dateType === 'self') {
       return (
         <>
-          <button onClick={() => handleUserSelection('none')}>Back</button>
-          <DateNightSelector 
-            handleUserSelection={handleUserSelection}
+          <button 
+            className='backButton'
+            onClick={() => handleUserSelection('none')}>
+              Back
+          </button>
+          <FallingHearts 
+            heartAmount={5}
+            startDelay={10}
+            fallDuration={30}
           />
+          <DateNightSelector />
         </>
       );
     } else if (dateType === 'auto') {
       return (
         <>
-          <button onClick={() => handleUserSelection('none')}>Back</button>
+          <button 
+            className='backButton'
+            onClick={() => handleUserSelection('none')}>
+              Back
+          </button>
+          <FallingHearts 
+            heartAmount={5}
+            startDelay={10}
+            fallDuration={30}
+          />
           <DateRandomizer />
         </>
       );
     } else {
       return (
         <>
-          <h1>
+          <h1 className='titleText'>
             Choose Your Own Date Night
           </h1>
-          <FallingHearts />
+          <FallingHearts 
+            heartAmount={25}
+            startDelay={5}
+            fallDuration={8}
+          />
           <DateNightOptions 
             handleUserSelection={handleUserSelection}
           />

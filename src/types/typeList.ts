@@ -13,19 +13,22 @@ interface DateNightOptionProps {
   handleUserSelection: (selection: 'self' | 'auto' | 'none') => void,
 }
 
-interface DateNightSelectorProps {
-  handleUserSelection: (selection: 'self' | 'auto' | 'none') => void,
-}
-
 interface DisplayDateSelectionProps {
   location: string,
   event: string,
+  startOver: () => void,
+}
+
+interface FallingHeartProps {
+  heartAmount: number,
+  startDelay: number,
+  fallDuration: number,
 }
 
 export type {
   DropDownProps,
   DropDownItemProps,
   DateNightOptionProps,
-  DateNightSelectorProps,
   DisplayDateSelectionProps,
+  FallingHeartProps,
 };
