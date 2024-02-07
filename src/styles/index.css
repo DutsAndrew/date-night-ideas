@@ -61,8 +61,8 @@ button:focus-visible {
   p {
     color: #ffffff;
   }
-  h2, h1, h3 {
-    color: #213547;
+  h2 {
+    color: #ffffff;
   }
 }
 
