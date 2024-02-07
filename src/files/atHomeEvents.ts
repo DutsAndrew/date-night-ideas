@@ -29,7 +29,6 @@ export const atHomeEvents = [
   "Watch each other's favorite childhood movies",
   "Have a documentary night",
   "Create a DIY home cinema experience",
-  "Host a virtual movie night with friends",
   "Explore foreign films together",
   "Watch classic black-and-white movies",
   "Have a nostalgia night with old TV shows",
@@ -49,7 +48,7 @@ export const atHomeEvents = [
   
   // Other Indoor Couple Dates
   "Indoor picnic with favorite snacks",
-  "Host a virtual game night with friends",
+  "Host an online game night with friends",
   "Create a custom playlist and dance together",
   "Have a themed costume night at home",
   "Build a blanket fort and have a cozy night",
@@ -72,7 +71,6 @@ export const atHomeEvents = [
   "Create a shared online photo album",
   
   // More Indoor Couple Dates
-  "Host a virtual double date with friends",
   "Have a technology-free night",
   "Take an online dance class together",
   "Plan and host a virtual party",
@@ -87,7 +85,7 @@ export const atHomeEvents = [
   "Write love letters to each other",
   "Learn a magic trick and perform for each other",
   "Have a DIY at-home wine or beer tasting",
-  "Host a virtual trivia night with friends",
+  "Host a trivia night with friends",
   "Create a DIY indoor mini-golf course",
   "Have a themed indoor picnic",
   "Plan and create a vision board for the future",
@@ -96,12 +94,10 @@ export const atHomeEvents = [
   "Build a fort and have a storytelling night",
 
   "Language learning night",
-  "DIY Science Experiments",
   "Start a book club and read the same book together",
   "Themed Dinner and Movie Night",
   "Memory Lane Night",
   "Gaming Marathon",
   "DIY Vision Board",
-  "Host a DIY outdoor spa night",
   "Go for a walk around the neighborhood",
 ];
