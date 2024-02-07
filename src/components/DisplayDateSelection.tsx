@@ -13,9 +13,9 @@ const DisplayDateSelection:FC<DisplayDateSelectionProps> = (props): JSX.Element 
     <div className="resultsContainer">
       <h2>Results:</h2>
       <p><strong>Location:</strong></p>
-      <p style={{margin: "auto"}}>{location}</p>
+      <p style={{margin: "auto"}}>{location.toLowerCase()}</p>
       <p><strong>Event:</strong></p>
-      <p style={{margin: "auto"}}>{event}</p>
+      <p style={{margin: "auto"}}>{event.toLowerCase()}</p>
       <button 
         style={{
           marginTop: "5vh",
