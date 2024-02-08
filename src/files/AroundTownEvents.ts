@@ -76,7 +76,7 @@ export const aroundTownEvents = [
   "Play Frisbee or other two person activity at park",
   "Go visit some local shops",
   "Walk up at the capital",
-  "Walk at a local park park",
+  "Walk at a local park",
   "Visit plant store",
   "Walk around target or other store",
   "Go out and get ingredients for a creative meal at home",
